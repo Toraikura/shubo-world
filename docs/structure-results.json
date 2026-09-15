@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "inlineBytes": 83425,
+  "uniqueIds": 84,
+  "externalRuntimeDependencies": 0,
+  "geometry": [
+    {
+      "scene": "buildWorld",
+      "instances": 4962,
+      "triangles": 987512,
+      "staticDrawCalls": 4
+    },
+    {
+      "scene": "buildCell",
+      "instances": 12084,
+      "triangles": 1258240,
+      "staticDrawCalls": 4
+    }
+  ],
+  "scope": "Static HTML, actual procedural geometry, math; no browser or GPU execution"
+}
