@@ -33,7 +33,7 @@ function buildSimulation() {
     messages: [],
     $: id => { if (!elements.has(id)) elements.set(id, {}); return elements.get(id); },
     clamp: (value, low, high) => Math.max(low, Math.min(high, value)),
-    panelClose() {}, setMode() {}, settingsLabels() {}, soundCue() {}, updateUI() {},
+    panelClose() {}, setMode() {}, settingsLabels() {}, soundCue() {}, updateUI() {}, save() {},
     notify(message) { context.messages.push(message); },
     finishBatch(win, message) {
       context.game.finished = true;

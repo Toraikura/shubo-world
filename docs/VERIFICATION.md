@@ -43,3 +43,6 @@ node tests/simulation.cjs
 ```
 
 機械結果：`structure-results.json` / `simulation-results.json`。
+# 育成追加の検証（2026-09-15）
+
+現行ローカル更新の仕様・検証範囲は `CARE_UPDATE.md`、結果は `care-update-*-results.json`。以下の初期検証は初版の記録として保持する。キャラクター比較画像は生成コンセプトであり、GPU・ブラウザ操作・実機の確認は今回も未実施。
