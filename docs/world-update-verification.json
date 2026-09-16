@@ -1,0 +1,435 @@
+{
+  "date": "2026-09-16",
+  "htmlSha256": "30778bc88872212b465e3acd2414a3805522e720ac03f8e15205ded4cbc28ba6",
+  "results": {
+    "structure": {
+      "status": "PASS",
+      "inlineBytes": 499753,
+      "uniqueIds": 122,
+      "externalRuntimeDependencies": 0,
+      "geometry": [
+        {
+          "scene": "buildWorld",
+          "instances": 4962,
+          "triangles": 987512,
+          "staticDrawCalls": 4
+        },
+        {
+          "scene": "buildCell",
+          "instances": 12084,
+          "triangles": 1258240,
+          "staticDrawCalls": 4
+        }
+      ],
+      "scope": "Static HTML, actual procedural geometry, math; no browser or GPU execution"
+    },
+    "care": {
+      "status": "PASS",
+      "checks": 21880,
+      "geometry": [
+        {
+          "style": "realistic",
+          "instances": 4962,
+          "triangles": 987512,
+          "staticDrawCalls": 4
+        },
+        {
+          "style": "character",
+          "instances": 5957,
+          "triangles": 1266112,
+          "staticDrawCalls": 4
+        }
+      ],
+      "scope": "Actual production lifecycle functions in Node VM; browser/GPU/mobile untested"
+    },
+    "ingredients": {
+      "status": "PASS",
+      "checks": 47665,
+      "canvasCommands": 76358,
+      "htmlSha256": "30778bc88872212b465e3acd2414a3805522e720ac03f8e15205ded4cbc28ba6",
+      "embeddedImageBytes": 279203,
+      "maxQueuedEffects": 4,
+      "maxMistLayers": 1,
+      "effectDurationSeconds": 3.2,
+      "scope": "Node VM event clocks, state, Canvas command bounds and embedded payload. No browser, GPU, screenshots or physical device testing."
+    },
+    "simulation": {
+      "status": "PASS",
+      "sourcePath": "/Users/yoshi/Documents/ChatGPT/HP制作/shubo-world/dist/index.html",
+      "htmlSha256": "30778bc88872212b465e3acd2414a3805522e720ac03f8e15205ded4cbc28ba6",
+      "extractedSimulationSha256": "2b6fc80fd999e56d535d45d28a65137781b605e6ccadc4b06453e076836fcb79",
+      "scenarios": [
+        {
+          "name": "restore 16C/65 after each event, next frame",
+          "dt": 0.016666666666666666,
+          "win": true,
+          "time": 376.667,
+          "sugar": 78.003,
+          "vitality": 90.367,
+          "ferment": 100,
+          "risk": 7.352,
+          "repairs": 3,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 16,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245,
+              "temperature": 21,
+              "acidity": 65
+            }
+          ],
+          "reason": null
+        },
+        {
+          "name": "restore after 5 simulated seconds",
+          "dt": 0.016666666666666666,
+          "win": true,
+          "time": 378.817,
+          "sugar": 78.474,
+          "vitality": 89.924,
+          "ferment": 100,
+          "risk": 7.928,
+          "repairs": 3,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 16,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245,
+              "temperature": 21,
+              "acidity": 65
+            }
+          ],
+          "reason": null
+        },
+        {
+          "name": "restore after 15 simulated seconds",
+          "dt": 0.016666666666666666,
+          "win": true,
+          "time": 383.083,
+          "sugar": 79.405,
+          "vitality": 89.038,
+          "ferment": 100,
+          "risk": 9.079,
+          "repairs": 3,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 16,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245,
+              "temperature": 21,
+              "acidity": 65
+            }
+          ],
+          "reason": null
+        },
+        {
+          "name": "completely unattended",
+          "dt": 0.016666666666666666,
+          "win": false,
+          "time": 480.017,
+          "sugar": 99.94,
+          "vitality": 39.781,
+          "ferment": 93.446,
+          "risk": 67.211,
+          "repairs": 0,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 23,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245,
+              "temperature": 28,
+              "acidity": 40
+            }
+          ],
+          "reason": "この世界は時間内に安定しませんでした。温度14〜20°C、酸性環境55〜80%を目安に育ててみよう。"
+        },
+        {
+          "name": "extreme initial environment 32C/0",
+          "dt": 0.016666666666666666,
+          "win": false,
+          "time": 147.767,
+          "sugar": 47.961,
+          "vitality": 2,
+          "ferment": 13.3,
+          "risk": 91.242,
+          "repairs": 0,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 32,
+              "acidity": 0
+            }
+          ],
+          "reason": "汚染圧が酵母の働きを上回りました。温度と酸性環境を見直して、もう一度。"
+        },
+        {
+          "name": "extreme initial environment 32C/100",
+          "dt": 0.016666666666666666,
+          "win": false,
+          "time": 475.667,
+          "sugar": 100,
+          "vitality": 2,
+          "ferment": 37.821,
+          "risk": 64.168,
+          "repairs": 0,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 32,
+              "acidity": 100
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 32,
+              "acidity": 75
+            },
+            {
+              "event": 3,
+              "time": 245,
+              "temperature": 32,
+              "acidity": 75
+            }
+          ],
+          "reason": "汚染圧が酵母の働きを上回りました。温度と酸性環境を見直して、もう一度。"
+        },
+        {
+          "name": "extreme initial environment 8C/0",
+          "dt": 0.016666666666666666,
+          "win": false,
+          "time": 204.25,
+          "sugar": 62.345,
+          "vitality": 1.999,
+          "ferment": 22.535,
+          "risk": 82.956,
+          "repairs": 0,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 15,
+              "acidity": 0
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 15,
+              "acidity": 0
+            }
+          ],
+          "reason": "汚染圧が酵母の働きを上回りました。温度と酸性環境を見直して、もう一度。"
+        },
+        {
+          "name": "extreme initial environment 8C/100",
+          "dt": 0.016666666666666666,
+          "win": false,
+          "time": 480.017,
+          "sugar": 100,
+          "vitality": 67.222,
+          "ferment": 88.984,
+          "risk": 0,
+          "repairs": 0,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.017,
+              "temperature": 15,
+              "acidity": 100
+            },
+            {
+              "event": 2,
+              "time": 160,
+              "temperature": 15,
+              "acidity": 75
+            },
+            {
+              "event": 3,
+              "time": 245,
+              "temperature": 20,
+              "acidity": 75
+            }
+          ],
+          "reason": "この世界は時間内に安定しませんでした。温度14〜20°C、酸性環境55〜80%を目安に育ててみよう。"
+        },
+        {
+          "name": "restore each event, integration step 0.03333333333333333",
+          "dt": 0.03333333333333333,
+          "win": true,
+          "time": 376.667,
+          "sugar": 78.004,
+          "vitality": 90.365,
+          "ferment": 100,
+          "risk": 7.354,
+          "repairs": 3,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.033,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160.033,
+              "temperature": 16,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245.033,
+              "temperature": 21,
+              "acidity": 65
+            }
+          ],
+          "reason": null
+        },
+        {
+          "name": "restore each event, integration step 0.06",
+          "dt": 0.06,
+          "win": true,
+          "time": 376.68,
+          "sugar": 78.008,
+          "vitality": 90.362,
+          "ferment": 100,
+          "risk": 7.357,
+          "repairs": 3,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.02,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160.02,
+              "temperature": 16,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245.04,
+              "temperature": 21,
+              "acidity": 65
+            }
+          ],
+          "reason": null
+        },
+        {
+          "name": "restore each event, integration step 0.18",
+          "dt": 0.18,
+          "win": true,
+          "time": 376.74,
+          "sugar": 78.022,
+          "vitality": 90.353,
+          "ferment": 100,
+          "risk": 7.371,
+          "repairs": 3,
+          "events": [
+            {
+              "event": 1,
+              "time": 85.14,
+              "temperature": 23,
+              "acidity": 65
+            },
+            {
+              "event": 2,
+              "time": 160.02,
+              "temperature": 16,
+              "acidity": 40
+            },
+            {
+              "event": 3,
+              "time": 245.16,
+              "temperature": 21,
+              "acidity": 65
+            }
+          ],
+          "reason": null
+        }
+      ],
+      "boundaryRuns": 60,
+      "checkedSteps": 446153,
+      "assertions": 4907991,
+      "observedRanges": {
+        "sugar": [
+          24.00266875,
+          100
+        ],
+        "vitality": [
+          1.9115250000004809,
+          90.36670000006363
+        ],
+        "ferment": [
+          0.0025685426269531253,
+          100
+        ],
+        "risk": [
+          0,
+          94.91064999998613
+        ]
+      },
+      "scope": "Pure simulation only; rendering, browser controls, and physical devices were not tested."
+    },
+    "world": {
+      "status": "PASS",
+      "checks": 8633,
+      "canvasCommands": 5271,
+      "maxCargoInstances": 146,
+      "maxAgentInstances": 25,
+      "htmlSha256": "30778bc88872212b465e3acd2414a3805522e720ac03f8e15205ded4cbc28ba6",
+      "scope": "Production state, save/restore, map focus, bounded dynamic data, 2D Canvas commands and GL uniform dispatch. No browser, GPU or device testing."
+    }
+  },
+  "notTested": [
+    "Browser visuals and interactions",
+    "GPU shader execution",
+    "Physical smartphone FPS and heat"
+  ]
+}
