@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": 21880,
+  "geometry": [
+    {
+      "style": "realistic",
+      "instances": 4962,
+      "triangles": 987512,
+      "staticDrawCalls": 4
+    },
+    {
+      "style": "character",
+      "instances": 5957,
+      "triangles": 1266112,
+      "staticDrawCalls": 4
+    }
+  ],
+  "scope": "Actual production lifecycle functions in Node VM; browser/GPU/mobile untested"
+}

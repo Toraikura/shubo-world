@@ -1,3 +1,7 @@
+# 素材投入演出の検証（2026-09-16）
+
+最新ローカル更新は `INGREDIENT_EFFECTS.md` と `ingredient-update-*-results.json` を参照。以下は各更新時点の記録。
+
 # 検証記録
 
 ## 2026-09-15 — ローカル検証

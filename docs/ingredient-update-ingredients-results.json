@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "checks": 47665,
+  "canvasCommands": 76358,
+  "htmlSha256": "49e024a9bcdde03f9f546a675d9086be0a797c2621138b3511f2889964d1bea5",
+  "embeddedImageBytes": 279203,
+  "maxQueuedEffects": 4,
+  "maxMistLayers": 1,
+  "effectDurationSeconds": 3.2,
+  "scope": "Node VM event clocks, state, Canvas command bounds and embedded payload. No browser, GPU, screenshots or physical device testing."
+}
