@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-18",
+  "htmlSha256": "033ff5f221709b34ad21ad413a3cbef683eaff1502882cc95f0d89c22501b42b",
+  "htmlBytes": 1106854,
+  "checks": {
+    "structure": {
+      "status": "PASS",
+      "inlineBytes": 1106854,
+      "uniqueIds": 137,
+      "externalRuntimeDependencies": 0
+    },
+    "care": {
+      "status": "PASS",
+      "checks": 19904
+    },
+    "ingredients": {
+      "status": "PASS",
+      "checks": 47665
+    },
+    "world": {
+      "status": "PASS",
+      "checks": 7345,
+      "maxCargoInstances": 146,
+      "maxAgentInstances": 5
+    },
+    "simulation": {
+      "status": "PASS",
+      "boundaryRuns": 60,
+      "checkedSteps": 446153,
+      "assertions": 4907991,
+      "scenarioCount": 71
+    }
+  },
+  "browser": {
+    "chromium": {
+      "status": "PASS",
+      "checks": 40
+    },
+    "webkit": {
+      "status": "PASS",
+      "checks": 40
+    },
+    "contextRestoration": {
+      "status": "PASS",
+      "glError": 0,
+      "devicePixelRatio": 3,
+      "canvas": [
+        583,
+        1267
+      ]
+    },
+    "viewports": [
+      [
+        320,
+        568
+      ],
+      [
+        402,
+        874
+      ],
+      [
+        874,
+        402
+      ],
+      [
+        1200,
+        900
+      ]
+    ],
+    "scope": "Local browsers including WebGL and forced 2D fallback; physical iPhone 17, thermals, battery and sustained FPS not tested"
+  }
+}

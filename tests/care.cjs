@@ -20,6 +20,14 @@ function setup(storage=new Map(),failWrites=false){
  vm.runInContext('this.api={buildWorld,buildCell,restoreRun,snapshot,normalizeSave,cleanName,save,chooseStyle,startBatch,finishBatch,interact,stepPlayer,stepCompanions,setMode,updateCare,bindControls,readSaveFile,game,colony,settings,player,camera};notify=()=>{};soundCue=()=>{};',ctx);
  ctx.api.buildWorld();return {ctx,api:ctx.api,storage,elements,doc,run:code=>vm.runInContext(code,ctx)};
 }
+// Exterior presentation must not alter the saved microscopic world.
+const exterior=setup();exterior.run("initKuraGeometry();game.ingredients=new Set(['water','rice','koji','yeast']);startBatch();setMode('yeast');game.time=42;game.energy=4;player.pos=[1,.2,6];camera.yaw=.43;paused=false;panel=null;");
+const priorExterior=exterior.api.snapshot();exterior.run('returnKura();');equal(exterior.api.snapshot().run,priorExterior.run,'returning to KURA preserves saved mode, camera, run and resources');
+for(let i=1;i<80;i++)exterior.run('frame('+i*16.67+')');equal(exterior.api.game.time,42,'KURA suspends even an unpaused active run');
+exterior.run('peekVat();tickKura(.1);paused=true;');const progress=exterior.run('kura.transition.progress');exterior.run('tickKura(.2)');equal(exterior.run('kura.transition.progress'),progress,'pause freezes approach');exterior.run("paused=false;panel='helpPanel';tickKura(.2)");equal(exterior.run('kura.transition.progress'),progress,'dialog freezes approach');exterior.run('panel=null;settings.animations=false;tickKura(.1)');equal(exterior.run('kura.transition'),null,'motion OFF completes manual approach without animated travel');
+const yawBefore=exterior.run('kura.yaw');exterior.run("input.keys.add('arrowleft');tickKura(.1);input.keys.clear()");check(exterior.run('kura.yaw')>yawBefore,'motion OFF preserves manual keyboard camera');
+exterior.run("enterMicro('character')");equal(exterior.api.snapshot().run,priorExterior.run,'entering LIFE preserves complete microscopic state');check(exterior.run('kura.scene')==='micro','LIFE entry completes');check(exterior.run('microPapers().length')<=64,'paper draw items capped');check(exterior.run('kura.instances')<600,'exterior geometry bounded');
+for(const b of Object.values(exterior.run('kura.batches')))check(b.data.every(Number.isFinite)&&b.data.length%18===0,'finite packed brewery geometry');
 const first=setup();const a=first.api;
 a.game.ingredients=new Set(['water','rice','koji','yeast']);a.startBatch();a.setMode('yeast');a.colony.name='こめまる';
 a.player.pos=[0,.2,6.8];a.game.time=83.4;a.game.energy=6;a.interact();equal(a.colony.totalBuds,1,'first actual bud recorded');

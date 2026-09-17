@@ -2,7 +2,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
 const html=fs.readFileSync(path.join(__dirname,'../dist/index.html'),'utf8'),script=html.match(/<script>([\s\S]*?)<\/script>/)[1];
 new vm.Script(script);
-assert(!/<script[^>]*\ssrc=|<link[^>]*\shref=|@import\b|url\(\s*https?:|\bfetch\(|new WebSocket|\bimport\s*\(/i.test(html),'no runtime network dependencies');
+assert(!/<script[^>]*\ssrc=|<link[^>]*\shref=[\x22\x27](?!data:)|@import\b|url\(\s*https?:|\bfetch\(|new WebSocket|\bimport\s*\(/i.test(html),'no runtime network dependencies');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);assert.equal(ids.length,new Set(ids).size,'unique IDs');
 for(const [,id] of script.matchAll(/\$\('([^']+)'\)/g))assert(ids.includes(id),'referenced element exists: '+id);
 const elements=new Map(ids.map(id=>[id,{}]));
