@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-18",
+  "change": "One-activation vat entrance; remove brewer button; stable hotspot hit target",
+  "htmlSha256": "48aa9b0a23775956a693b41b023b3cb38d3905570d1841462c4d1ae6ca16f83b",
+  "browser": {
+    "chromium": {
+      "status": "PASS",
+      "engine": "chromium",
+      "checks": 41,
+      "errors": [],
+      "scope": "Local browser GPU + 2D fallback, 402x874 touch viewport and responsive widths; no physical iPhone test."
+    },
+    "webkit": {
+      "status": "PASS",
+      "engine": "webkit",
+      "checks": 41,
+      "errors": [],
+      "scope": "Local browser GPU + 2D fallback, 402x874 touch viewport and responsive widths; no physical iPhone test."
+    }
+  },
+  "careChecks": 19907,
+  "physical_iPhone17": "NOT TESTED"
+}

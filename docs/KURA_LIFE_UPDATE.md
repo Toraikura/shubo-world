@@ -3,10 +3,10 @@
 ## Delivered experience
 
 - Starts in an open-front 3D miniature brewery, with a rope-bound wooden vat, rice/koji trays, cloth banners, lanterns, a paper brewer and a glimpse of the microscopic world.
-- Tap the vat or the primary button to approach, then descend through the liquid into LIFE. Drag/pinch or arrow keys and +/− control the exterior camera. E activates the entrance; R restores the overview.
+- Tap the vat or the primary button once to descend through the liquid into LIFE. Drag/pinch or arrow keys and +/− control the exterior camera. E activates the entrance; R restores the overview.
 - LIFE uses generated, transparent paper cutouts in 3D: four yeast body/face variants, separate buds/children, paper koji and a face-free reverse. The planes have no inflated body volume; they become edge-on when viewed from the side. The paper draw pass shares the world depth buffer, so branches occlude characters.
 - REAL keeps the original biological geometry and scientific cutaway. The top navigation distinguishes all three layers. LIFE from the cutaway returns to the microscopic world; REAL preserves the selected world view.
-- The brewer and koji trays have tap responses. Moving water and floating paper microbes give the vat a visible entrance.
+- The koji trays have a tap response. The brewer remains in the scene without a separate button. Moving water and floating paper microbes give the vat a visible entrance.
 
 ## Save and simulation boundary
 
@@ -31,3 +31,9 @@ Motion defaults ON for new state. OFF/reduced motion freezes ambient movement an
 - `node tests/kura-browser.cjs [chromium|webkit]`: 40 checks per engine covering entry, actual ingredient controls/start, LIFE/REAL/cutaway/player views, outside-click panels, save/reload, direct movement with motion OFF, viewport widths 320/402/874/1200, reduced motion and forced 2D fallback. Uses local Playwright as a development-only tool.
 
 These are local browser/emulation results, not physical iPhone 17 tests. Actual phone temperature, battery, audio and sustained frame rate remain unmeasured. The benchmark MP4 could not be decoded in this environment; the supplied still images and written direction were used.
+
+## Entrance simplification — 2026-09-18
+
+The vat hotspot, bottom entrance button and direct vat tap now each enter LIFE with one activation. The intermediate approach stop was removed. The bottom button reads `樽の中へ入る`; the brewer hotspot was removed while retaining the brewer artwork. Pause, reduced motion and save preservation use the existing descent path.
+
+A global pressed-button transform previously overrode the centered hotspot transform, moving the vat button under the pointer on press. The hotspot active/hover rule now has sufficient specificity to keep its hit target fixed; the browser entrance check clicks the hotspot itself.
