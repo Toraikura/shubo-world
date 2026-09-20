@@ -4,6 +4,18 @@
 
 **ゲーム本体：`dist/index.html`**
 
+**プレイ用URL：<https://toraikura.github.io/shubo-world/>**
+
+蔵の木桶を1回タップすると、紙の生命が暮らす発酵世界へ入ります。同じ世界をリアルな微生物表示でも観察できます。
+
+## GitHub Pagesでの公開
+
+`main` への更新で `.github/workflows/pages.yml` が実行されます。単体HTML・形状・育成・保存の検証が成功した後、`dist` の内容を公開します。ゲーム本体のビルドや外部ライブラリのインストールは不要です。
+
+公開状態は [GitHub Actions](https://github.com/Toraikura/shubo-world/actions/workflows/pages.yml) で確認できます。ChatGPT Sites用の既存設定は `.openai/hosting.json` に独立して残しています。
+
+## ローカルで遊ぶ
+
 PCではファイルをブラウザで直接開けます。スマートフォンでは配信用URLからの起動を推奨します。ファイル直接起動の可否はOS・ブラウザのローカルHTMLの扱いに依存します。ゲーム本体は通信なしで実行できます。
 
 ローカルプレビュー：
@@ -29,7 +41,7 @@ python3 -m http.server 8768 --bind 127.0.0.1 --directory dist
 
 仕込みの途中・名前付き菌株・育成記録・設定・図鑑・最高記録を端末内に保存します。上部の「育成」からリアル／キャラクター切替、命名、セーブ書き出し／読み込みができます。離れている間は進行しません。
 
-今回の追加とアプリ化の設計案は `docs/CARE_UPDATE.md`。実装はローカル段階で、既存の配信URLには未反映です。
+育成機能とアプリ化の設計案は `docs/CARE_UPDATE.md` を参照してください。
 
 ## 素材投入の演出（2026-09-16）
 
@@ -43,4 +55,4 @@ python3 -m http.server 8768 --bind 127.0.0.1 --directory dist
 
 「世界の地図」から米の浅瀬・麹の回廊・酵母の入り江を眺められます。投入した素材が世界に現れ、育成に応じて糖の光・酵母の集まり・気泡が変わります。既存の途中セーブ、アニメーションOFF、2D表示にも対応します。
 
-仕様と検証範囲は `docs/WORLD_BUILDING.md`。今回もローカルの更新で、配信URLには未反映です。
+仕様と検証範囲は `docs/WORLD_BUILDING.md` を参照してください。
